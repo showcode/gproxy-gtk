@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="gproxy-gtk" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option platforms="Unix;" />
+				<Option output="bin/Debug/gproxy-gtk" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option platforms="Unix;" />
+				<Option output="bin/Release/gproxy-gtk" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add option="`pkg-config gtk+-2.0 --cflags`" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config gtk+-2.0 --libs`" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="xgettext -k_ -kQ_ -kN_ -kC_ -kNC_ -o po/gproxy-gtk.pot *.h *.cpp" />
+		</ExtraCommands>
+		<Unit filename="authdlg.cpp" />
+		<Unit filename="authdlg.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Unit filename="mainwnd.cpp" />
+		<Unit filename="mainwnd.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
