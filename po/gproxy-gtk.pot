@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-20 10:47+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: authdlg.cpp:7
+msgid "Proxy authentication"
+msgstr ""
+
+#: authdlg.cpp:23
+msgid "Use authetication"
+msgstr ""
+
+#: authdlg.cpp:28
+msgid "Username"
+msgstr ""
+
+#: authdlg.cpp:34
+msgid "Password"
+msgstr ""
+
+#: mainwnd.cpp:8
+msgid "Proxy properties"
+msgstr ""
+
+#: mainwnd.cpp:29
+msgid "Direct connect"
+msgstr ""
+
+#: mainwnd.cpp:35
+msgid "Manual settings"
+msgstr ""
+
+#: mainwnd.cpp:49
+msgid "Use same proxy for all proto"
+msgstr ""
+
+#: mainwnd.cpp:53
+msgid "More"
+msgstr ""
+
+#: mainwnd.cpp:56
+msgid "HTTP"
+msgstr ""
+
+#: mainwnd.cpp:57
+msgid "HTTPS"
+msgstr ""
+
+#: mainwnd.cpp:58
+msgid "FTP"
+msgstr ""
+
+#: mainwnd.cpp:59
+msgid "SOCKS"
+msgstr ""
+
+#: mainwnd.cpp:62
+msgid "Ignore proxy for this hosts"
+msgstr ""
+
+#: mainwnd.cpp:76
+msgid "Autoconfig url"
+msgstr ""
+
+#: mainwnd.cpp:84
+msgid "Url"
+msgstr ""
