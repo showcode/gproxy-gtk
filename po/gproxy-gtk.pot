@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-20 10:47+0300\n"
+"POT-Creation-Date: 2018-02-10 23:13+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,66 +17,79 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: authdlg.cpp:7
+#: authdlg.cpp:9
 msgid "Proxy authentication"
 msgstr ""
 
-#: authdlg.cpp:23
+#: authdlg.cpp:25
 msgid "Use authetication"
 msgstr ""
 
-#: authdlg.cpp:28
+#: authdlg.cpp:31
 msgid "Username"
 msgstr ""
 
-#: authdlg.cpp:34
+#: authdlg.cpp:37
 msgid "Password"
 msgstr ""
 
-#: mainwnd.cpp:8
-msgid "Proxy properties"
+#: mainwnd.cpp:10
+#, c-format
+msgid "Proxy properties (%s)"
 msgstr ""
 
-#: mainwnd.cpp:29
-msgid "Direct connect"
-msgstr ""
-
-#: mainwnd.cpp:35
-msgid "Manual settings"
-msgstr ""
-
-#: mainwnd.cpp:49
-msgid "Use same proxy for all proto"
-msgstr ""
-
-#: mainwnd.cpp:53
-msgid "More"
-msgstr ""
-
-#: mainwnd.cpp:56
-msgid "HTTP"
-msgstr ""
-
-#: mainwnd.cpp:57
-msgid "HTTPS"
+#: mainwnd.cpp:55
+msgid "GSettings"
 msgstr ""
 
 #: mainwnd.cpp:58
+msgid "Direct connect"
+msgstr ""
+
+#: mainwnd.cpp:65
+msgid "Manual settings"
+msgstr ""
+
+#: mainwnd.cpp:79
+msgid "Use same proxy for all proto"
+msgstr ""
+
+#: mainwnd.cpp:83
+msgid "More"
+msgstr ""
+
+#: mainwnd.cpp:86 mainwnd.cpp:153
+msgid "HTTP"
+msgstr ""
+
+#: mainwnd.cpp:87 mainwnd.cpp:154
+msgid "HTTPS"
+msgstr ""
+
+#: mainwnd.cpp:88 mainwnd.cpp:155
 msgid "FTP"
 msgstr ""
 
-#: mainwnd.cpp:59
+#: mainwnd.cpp:89 mainwnd.cpp:156
 msgid "SOCKS"
 msgstr ""
 
-#: mainwnd.cpp:62
+#: mainwnd.cpp:92 mainwnd.cpp:160
 msgid "Ignore proxy for this hosts"
 msgstr ""
 
-#: mainwnd.cpp:76
+#: mainwnd.cpp:106
 msgid "Autoconfig url"
 msgstr ""
 
-#: mainwnd.cpp:84
+#: mainwnd.cpp:114
 msgid "Url"
+msgstr ""
+
+#: mainwnd.cpp:129
+msgid "Environment"
+msgstr ""
+
+#: mainwnd.cpp:137
+msgid "Source"
 msgstr ""
