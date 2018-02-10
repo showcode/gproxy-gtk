@@ -34,9 +34,13 @@ void load_auth_settings(AuthDialog *dialog)
   dialog->set_use_auth(
     g_settings_get_boolean(settings, GSETTINGS_KEY_USE_AUTH));
   // username & password
-  dialog->set_auth(
-    g_settings_get_string(settings, GSETTINGS_KEY_AUTH_USER),
-    g_settings_get_string(settings, GSETTINGS_KEY_AUTH_PASS));
+  gchar* username = g_settings_get_string(settings, GSETTINGS_KEY_AUTH_USER);
+  gchar* password = g_settings_get_string(settings, GSETTINGS_KEY_AUTH_PASS);
+  dialog->set_auth(username, password);
+  // cleanup
+  g_free(username);
+  g_free(password);
+  g_clear_object(&settings);
 }
 
 void save_auth_settings(AuthDialog *dialog)
@@ -50,6 +54,8 @@ void save_auth_settings(AuthDialog *dialog)
   dialog->get_auth(username, password);
   g_settings_set_string(settings, GSETTINGS_KEY_AUTH_USER, username);
   g_settings_set_string(settings, GSETTINGS_KEY_AUTH_PASS, password);
+  // cleanup
+  g_clear_object(&settings);
 }
 
 void load_gsettings(MainWindow *window)
@@ -405,6 +411,7 @@ static void on_apply_clicked(GtkWidget *sender, MainWindow *window)
 static void on_proxy_auth_clicked(GtkWidget *sender, MainWindow *window)
 {
   AuthDialog *dlg = new AuthDialog(GTK_WINDOW(window->win));
+  load_auth_settings(dlg);
   switch (dlg->show_modal())
   {
     case GTK_RESPONSE_OK:
