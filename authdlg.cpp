@@ -1,4 +1,6 @@
+#include <glib/gi18n.h>
 #include "authdlg.h"
+#include "apputils.h"
 
 AuthDialog::AuthDialog(GtkWindow *parent)
 {
@@ -21,6 +23,7 @@ AuthDialog::AuthDialog(GtkWindow *parent)
 
   // checkbox
   this->use_auth_checkbox = gtk_check_button_new_with_label(_("Use authetication"));
+  gtk_button_set_bold(GTK_BUTTON(this->use_auth_checkbox));
   g_signal_connect(this->use_auth_checkbox, "toggled", G_CALLBACK(on_use_auth_toggled), this);
   gtk_table_attach(GTK_TABLE(table), this->use_auth_checkbox, 0, 2, 0, 1, GTK_FILL, GtkAttachOptions(0), 0, 0);
 
@@ -45,13 +48,6 @@ AuthDialog::~AuthDialog()
   gtk_widget_destroy(this->win);
 }
 
-gint AuthDialog::show_modal()
-{
-  gtk_widget_show_all(GTK_WIDGET(this->win));
-  gtk_window_set_position(GTK_WINDOW(this->win), GTK_WIN_POS_CENTER_ON_PARENT);
-  return gtk_dialog_run(GTK_DIALOG(this->win));
-}
-
 void AuthDialog::use_auth_changed()
 {
   gboolean enabled = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(this->use_auth_checkbox));
@@ -63,3 +59,31 @@ void AuthDialog::use_auth_changed()
     gtk_widget_set_sensitive(widget, enabled);
 }
 
+gint AuthDialog::show_modal()
+{
+  gtk_widget_show_all(GTK_WIDGET(this->win));
+  gtk_window_set_position(GTK_WINDOW(this->win), GTK_WIN_POS_CENTER_ON_PARENT);
+  return gtk_dialog_run(GTK_DIALOG(this->win));
+}
+
+gboolean AuthDialog::get_use_auth()
+{
+  return gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(this->use_auth_checkbox));
+}
+
+void AuthDialog::set_use_auth(gboolean use)
+{
+  gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(this->use_auth_checkbox), use);
+}
+
+void AuthDialog::get_auth(const gchar* &username, const gchar* &password)
+{
+  username = gtk_entry_get_text(GTK_ENTRY(this->username_entry));
+  password = gtk_entry_get_text(GTK_ENTRY(this->password_entry));
+}
+
+void AuthDialog::set_auth(const gchar* username, const gchar* password)
+{
+  gtk_entry_set_text(GTK_ENTRY(this->username_entry), username);
+  gtk_entry_set_text(GTK_ENTRY(this->password_entry), password);
+}

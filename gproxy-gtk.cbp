@@ -41,6 +41,8 @@
 		<ExtraCommands>
 			<Add after="xgettext -k_ -kQ_ -kN_ -kC_ -kNC_ -o po/gproxy-gtk.pot *.h *.cpp" />
 		</ExtraCommands>
+		<Unit filename="apputils.cpp" />
+		<Unit filename="apputils.h" />
 		<Unit filename="authdlg.cpp" />
 		<Unit filename="authdlg.h" />
 		<Unit filename="main.cpp" />
